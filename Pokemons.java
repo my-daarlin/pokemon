@@ -109,6 +109,7 @@ public class Main {
 
         Scanner pokemonCommands = new Scanner(System.in);
         String commandInput;
+
         while (true) {
             System.out.println("What sould I do?");
             commandInput = pokemonCommands.nextLine();
