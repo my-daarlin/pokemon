@@ -1,0 +1,13 @@
+V8
+    evolve printlines missing
+    abilities missing from stats tab
+    stage 3 cycle
+    raichu addition
+    ivysaur addition
+    venusaur addition
+
+V9
+    hp system
+
+MICELAUNIOUS
+    V1 should be V2 and new V1 should be without scanners 
