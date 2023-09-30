@@ -198,7 +198,8 @@ public class Main {
                     break;
                 }
                 else {
-                    b = false; //if its smaller, it will say, that the pokemon cant evolve
+                    b = false; //if its smaller, it will skip the next class
+                    break;
                 }
             }
 
