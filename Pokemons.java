@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
-//public class PokemonsV4 {
+//public class PokemonsV6 {
 public class Main {
     public static void main(String[] args) {
         
-        //POKEMON VARIABLES SETUP
+        //MAIN POKEMON VARIABLES SETUP
 
         String pokemonName;
         String pokemonType;
@@ -12,45 +12,35 @@ public class Main {
         String pokemonClass;
         String pokemonBackroundColour;
         String pokemonFontColour;
+        String pokemonAbility1;
+        String pokemonAbility2;
 
+        //PICHU VARIABLES
 
-        //POKEMON TYPE SELECT + CLASS ASSIGN
-        
-        Scanner pokemonTypeInput = new Scanner(System.in);                                       // Create a Scanner object
-        System.out.println("What Pokemon do you select? :");
-        
-        while (true) {
-            pokemonType = pokemonTypeInput.nextLine();                                           // Read user input
-            if (pokemonType.equalsIgnoreCase("Pikachu")) {
-                pokemonType = "Pikachu";
-                pokemonClass = "Electric";
-                System.out.println("Pikachu selected!");
-                break;
-            }
-            else if (pokemonType.equalsIgnoreCase("Bulbasaur")) {
-                pokemonType = "Bulbasaur";
-                pokemonClass = "Seed";
-                System.out.println("Bulbasaur selected!");
-                break;
-            }
-            else {
-                System.out.println("You can only select out of these Pokemons: \n    Bulbasaur\n    Pikachu");
-            }
-        }
-
-        //COLOUR ASSIGN
-        
-        if (pokemonType.equals("Electric")) {
-            pokemonBackroundColour = "\u001b[43m";  //yellow
-            pokemonFontColour = "\u001b[30m"; //black
-        }
-        else {
-            pokemonBackroundColour = "\u001b[42m"; //green
-            pokemonFontColour = "\u001b[30m"; //black
-        }
+        String pichuImageLine1 = "        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⣶⣿";
+        String pichuImageLine2 = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣴⣾⣿⣿⣿⣿⣿";
+        String pichuImageLine3 = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿⣿⠟⢻⣿⣿⣿⣿";
+        String pichuImageLine4 = "⣀⣀⣀⣀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⠿⠋⠀⠀⠈⢡⣿⣿⡇";
+        String pichuImageLine5 = "⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣄⠀⠀⠀⠀⠀⠀⠟⠁⠀⠀⠀⠀⠀⣼⣿⣿⠁";
+        String pichuImageLine6 = "⠀⠹⣿⣿⣿⠿⡄⠉⠉⠙⠛⠻⢿⠀⠀⠀⣀⡀⠀⠘⠄⠀⠀⠀⠀⢠⣿⣿⡟⠀";
+        String pichuImageLine7 = "⠀⠀⠙⣿⣿⣷⡀⠀⠀⠀⠀⠀⢸⠤⠂⠁⠀⠀⠀⠀⠀⠀⠀⠠⡀⠚⠛⠛⠀⠀";
+        String pichuImageLine8 = "⠀⠀⠀⠈⢿⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⢤⣄⠀⠐⡀⠀⠀⠀⠀";
+        String pichuImageLine9 = "⠀⠀⠀⠀⠀⠻⣿⣿⣿⠦⢲⠁⠀⢀⢀⠀⠀⠀⠀⠀⠸⣾⡿⢃⣠⡅⠀⠀⠀⠀";
+        String pichuImageLine10 = "⠀⠀⠀⠀⠀⠀⠈⠉⠀⠀⢸⠀⠐⣷⣾⡇⠀⠀⠂⠀⡀⠀⠀⣾⣿⡇⠀⠀⠀⠀";
+        String pichuImageLine11 = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣠⣤⣌⠉⠀⠀⠒⠒⠊⠀⠀⠀⢙⣟⠤⠀⠀⠀⠀";
+        String pichuImageLine12 = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠻⣿⡇⠀⠀⠀⠀⠀⣀⣤⣶⠉⠀⠀⢠⠃⠀⠀";
+        String pichuImageLine13 = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠔⠀⠀⠉⠉⡽⣿⣿⣿⢿⣿⠁⠀⢀⠔⠁⠀⠀⠀";
+        String pichuImageLine14 = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⢤⢤⢴⠀⠋⠀⠁⠀⠉⠀⠸⣠⣴⣤⡀⠀⠀";
+        String pichuImageLine15 = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠘⠀⢣⠀⠀⠀⠀⠀⠀⢀⠿⣿⣿⣿⣦⡀";
+        String pichuImageLine16 = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢄⠀⢀⠀⠀⠀⠀⠀⢀⠈⠀⠈⠻⣿⠟⠋";
+        String pichuImageLine17 = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠁⠀⢠⠀⠀⠐⡄⠀⠀⠀⠀⠀";
+        String pichuImageLine18 = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠣⣀⣌⠇⠀⠀⠀⠀⠀";
+        String pichuImage = pichuImageLine1 + "\n" + pichuImageLine2 + "\n" + pichuImageLine3 + "\n" + pichuImageLine4 + "\n" + pichuImageLine5 + "\n" + pichuImageLine6 + "\n" + pichuImageLine7 + "\n" + pichuImageLine8 + "\n" + pichuImageLine9 + "\n" + pichuImageLine10 + "\n" + pichuImageLine11 + "\n" + pichuImageLine12 + "\n" + pichuImageLine13 + "\n" + pichuImageLine14 + "\n" + pichuImageLine15 + "\n" + pichuImageLine16 + "\n" + pichuImageLine17 + "\n" + pichuImageLine18; 
 
         //PIKACHU VARIABLES
         
+        String pikachuAbility1 = "\u001b[43m" + "\u001b[30m" + "Lightning rod" + "\u001B[0m";
+        String pikachuAbility2 = "\u001b[43m" + "\u001b[30m" + "Thunder" + "\u001B[0m";
         String pikachuImageLine1 = ("⠸⣷⣦⠤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣠⣤⠀⠀⠀");
         String pikachuImageLine2 = (" ⠙⣿⡄⠈⠑⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠔⠊⠉⣿⡿⠁⠀⠀⠀");
         String pikachuImageLine3 = ("⠀⠀⠈⠣⡀⠀⠀⠑⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠊⠁⠀⠀⣰⠟⠀⠀⠀⣀⣀");
@@ -70,6 +60,8 @@ public class Main {
         
         //BULBASAUR VARIABLES
 
+        String bulbasaurAbility1 = "\u001b[42m" + "\u001b[30m" + "Whine whip" + "\u001B[0m";
+        String bulbasaurAbility2 = "\u001b[42m" + "\u001b[30m" + "Razor leaf" + "\u001B[0m";
         String bulbasaurImageLine1  = ("         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⣀⡀");
         String bulbasaurImageLine2  = (" ⠀⠀⢀⡀⠀⠀       ⠀⠠⠐⠂⠀⠁⠀⠀⠀⠀");
         String bulbasaurImageLine3  = (" ⠀⠰⡁⠐⢉⣉⣭⡍⠁⠂⠉⠘⡀ ⠀⠀⠀⠀⠂⠡⠀");
@@ -81,6 +73,46 @@ public class Main {
         String bulbasaurImageLine9  = (" ⠀⠀⠘⡿⠃⠀⠨⠒⢆⣸⣿⠁⠀⡠⡇⠈⠋⠀⠰⠀");
         String bulbasaurImageLine10  = (" ⠀⠀⠀⠛⠒⠒⠁⠀⠈⠷⡤⠤⠐⠀⠘⠒⠒⠖⠁⠀");
         String bulbasaurImage = bulbasaurImageLine1 + "\n" + bulbasaurImageLine2 + "\n" + bulbasaurImageLine3 + "\n" + bulbasaurImageLine4 + "\n" + bulbasaurImageLine5 + "\n" + bulbasaurImageLine6 + "\n" + bulbasaurImageLine7 + "\n" + bulbasaurImageLine8 + "\n" + bulbasaurImageLine9 + "\n" + bulbasaurImageLine10;
+
+        //POKEMON TYPE SELECT + CLASS ASSIGN
+        
+        Scanner pokemonTypeInput = new Scanner(System.in);                                       // Create a Scanner object
+        System.out.println("What Pokemon do you select? :");
+        
+        while (true) {
+            pokemonType = pokemonTypeInput.nextLine();                                           // Read user input
+            if (pokemonType.equalsIgnoreCase("Pikachu")) {
+                pokemonType = "Pikachu";
+                pokemonClass = "Electric";
+                pokemonAbility1 = pikachuAbility1;
+                pokemonAbility2 = pikachuAbility2;
+                System.out.println("Pikachu selected!");
+                break;
+            }
+            else if (pokemonType.equalsIgnoreCase("Bulbasaur")) {
+                pokemonType = "Bulbasaur";
+                pokemonClass = "Seed";
+                pokemonAbility1 = bulbasaurAbility1;
+                pokemonAbility2 = bulbasaurAbility2;
+                System.out.println("Bulbasaur selected!");
+                break;
+            }
+            else {
+                System.out.println("You can only select out of these Pokemons: \n    Bulbasaur\n    Pikachu");
+            }
+        }
+
+        //COLOUR ASSIGN
+        
+        if (pokemonType.equals("Electric")) {
+            pokemonBackroundColour = "\u001b[43m";  //yellow
+            pokemonFontColour = "\u001b[30m"; //black
+        }
+        else {
+            pokemonBackroundColour = "\u001b[42m"; //green
+            pokemonFontColour = "\u001b[30m"; //black
+        }
+
 
         //IMAGE ASSIGN
 
@@ -103,13 +135,12 @@ public class Main {
         
         //NEW POKEMON CLASS CREATION
 
-        Pokemon pokemon1  = new Pokemon(pokemonName, pokemonType, pokemonClass, pokemonImage, pokemonFontColour, pokemonBackroundColour);
+        Pokemon pokemon1  = new Pokemon(pokemonName, pokemonType, pokemonClass, pokemonImage, pokemonFontColour, pokemonBackroundColour, pokemonAbility1, pokemonAbility2);
         
         //COMMAND LINES LOOP
 
         Scanner pokemonCommands = new Scanner(System.in);
         String commandInput;
-
         while (true) {
             System.out.println("What sould I do?");
             commandInput = pokemonCommands.nextLine();
@@ -149,14 +180,18 @@ class Pokemon {
     private String pokemonClass;
     private String pokemonFontColour;
     private String pokemonBackroundColour;
+    private String pokemonAbility1;
+    private String pokemonAbility2;
 
-    public Pokemon(String pokemonName, String pokemonType, String pokemonClass, String pokemonImage, String pokemonFontColour, String pokemonBackroundColour) {
+    public Pokemon(String pokemonName, String pokemonType, String pokemonClass, String pokemonImage, String pokemonFontColour, String pokemonBackroundColour, String pokemonAbility1, String pokemonAbility2) {
         this.pokemonName = pokemonName;
         this.pokemonImage = pokemonImage;
         this.pokemonType = pokemonType;
         this.pokemonClass = pokemonClass;
         this.pokemonFontColour = pokemonFontColour;
         this.pokemonBackroundColour = pokemonBackroundColour;
+        this.pokemonAbility1 = pokemonAbility1;
+        this.pokemonAbility2 = pokemonAbility2;
     }
     public void stats() {
         String colourReset = "\u001B[0m";
@@ -168,11 +203,11 @@ class Pokemon {
     }
 
     public void ability1() {
-        System.out.println(pokemonType + " " + pokemonName + " uses ability one!");
+        System.out.println(pokemonType + " " + pokemonName + " uses " + pokemonAbility1 + "!");
     }
 
     public void ability2() {
-        System.out.println(pokemonType + " " + pokemonName + " uses ability two!");
+        System.out.println(pokemonType + " " + pokemonName + " uses " + pokemonAbility2 + "!");
     }
 }
 
