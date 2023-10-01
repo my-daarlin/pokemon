@@ -1,3 +1,6 @@
+//URL USED
+//https://emojicombos.com/pokemon-dot-art
+
 import java.util.Scanner;
 
 //public class PokemonsV6 {
@@ -27,9 +30,17 @@ public class Main {
         String stage2PokemonAbility2 = " ";
         int stage2PokemonStageCount = 0;
 
+        //STAGE 3 POKEMON VARIABLES SETUP
+
+        String stage3PokemonImage = " ";
+        String stage3PokemonType = " ";
+        String stage3PokemonAbility1 = " ";
+        String stage3PokemonAbility2 = " ";
+        int stage3PokemonStageCount = 0;
+
         //PICHU VARIABLES
 
-        int pichuStageCount = 1;
+        int pichuStageCount = 2;
         String pichuAbility1 = "\u001b[43m" + "\u001b[30m" + "collect" + "\u001B[0m";   
         String pichuAbility2 = "\u001b[43m" + "\u001b[30m" + "cry for help" + "\u001B[0m";
         String pichuImageLine1 = "        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⣶⣿";
@@ -54,7 +65,7 @@ public class Main {
 
         //PIKACHU VARIABLES
         
-        int pikachuStageCount = 0;
+        int pikachuStageCount = 1;
         String pikachuAbility1 = "\u001b[43m" + "\u001b[30m" + "Lightning rod" + "\u001B[0m";
         String pikachuAbility2 = "\u001b[43m" + "\u001b[30m" + "Thunder" + "\u001B[0m";
         String pikachuImageLine1 = ("⠸⣷⣦⠤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣠⣤⠀⠀⠀");
@@ -74,6 +85,29 @@ public class Main {
         String pikachuImageLine15 = ("⠀⠀⠀⠀⠀⠈⠻⠿⠿⠓⠄⠤⠘⠉⠙⠤⢀⠾⠿⣿⠟⠋");
         String pikachuImage = pikachuImageLine1 + "\n" + pikachuImageLine2 + "\n" + pikachuImageLine3 + "\n" + pikachuImageLine4 + "\n" + pikachuImageLine5 + "\n" + pikachuImageLine6 + "\n" + pikachuImageLine7 + "\n" + pikachuImageLine8 + "\n" + pikachuImageLine9 + "\n" + pikachuImageLine10 + "\n" + pikachuImageLine11 + "\n" + pikachuImageLine12 + "\n" + pikachuImageLine13 + "\n" + pikachuImageLine14 + "\n" + pikachuImageLine15;
         
+        //RAICHU VARIABLES
+
+        int raichuStageCount = 0;
+        String raichuAbility1 =  "\u001b[43m" + "\u001b[30m" + "Thunder Shock" + "\u001B[0m";
+        String raichuAbility2 =  "\u001b[43m" + "\u001b[30m" + "Ace Spark" + "\u001B[0m";
+        String raichuImageLine1 = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣶⠀⠀⠀⠀⠀⠀⠀⠀⠀";
+        String raichuImageLine2 = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⠛⢿⠀⠀⠀⠀⠀⠀⠀⠀⠀";
+        String raichuImageLine3 = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡏⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀";
+        String raichuImageLine4 = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠃⠀⠼⣄⡀⠀⠀⠀⠀⠀⠀⠀";
+        String raichuImageLine5 = "⠀⠀⠀⡴⠋⠳⣄⠀⠀⢀⢎⣔⠀⠀⠀⠀⠉⠳⣄⠀⠀⠀⠀⠀";
+        String raichuImageLine6 = "⠀⢠⠞⠁⠀⠀⠀⠹⣶⢛⠘⡋⠀⢠⣎⣦⠀⠀⠈⠙⠲⢤⡀⠀";
+        String raichuImageLine7 = "⣰⠏⠀⠀⠀⠀⠀⠀⢰⠀⠰⡤⡀⠀⢛⣋⠀⠀⠰⣄⣀⣠⣿⣆";
+        String raichuImageLine8 = "⠛⠒⠶⠶⢶⡶⠄⢀⣨⢦⡀⠢⠃⠀⠸⣿⠇⠀⢰⠃⠉⠉⠉⠉";
+        String raichuImageLine9 = "⠀⠀⠀⠰⠿⣤⣀⠛⢧⣌⡇⠀⠀⠀⠀⠀⠰⠉⠙⢳⠀⠀⠀⠀";
+        String raichuImageLine10 = "⠀⠀⠀⠀⠀⠀⣼⣣⣞⣽⣇⠀⠈⠑⢄⠀⠐⢄⣀⣸⠀⠀⠀⠀";
+        String raichuImageLine11 = "⠀⠀⠀⠀⠀⠈⠛⣿⣿⠁⠉⠠⡀⠀⠀⡆⠀⠀⠀⢹⡀⠀⠀⠀";
+        String raichuImageLine12 = "⠀⠀⠀⠀⠀⠀⠀⠹⡿⠇⠀⠀⢈⠁⠊⠀⠀⠀⠀⠈⣇⠀⠀⠀";
+        String raichuImageLine13 = "⠀⠀⠀⠀⠀⠀⠀⠀⣧⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀";
+        String raichuImageLine14 = "⠀⠀⠀⠀⠀⠀⠀⠀⣸⠗⠀⣀⣦⣀⣤⣤⠴⠾⣄⡀⠺⡄⠀⠀";
+        String raichuImageLine15 = "⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠉⠉⠁⠀⠀";
+        String raichuImage = raichuImageLine1 + "\n" + raichuImageLine2 + "\n" + raichuImageLine3 + "\n" + raichuImageLine4 + "\n" + raichuImageLine5 + "\n" + raichuImageLine6 + "\n" + raichuImageLine7 + "\n" + raichuImageLine8 + "\n" + raichuImageLine9 + "\n" + raichuImageLine10 + "\n" + raichuImageLine11 + "\n" + raichuImageLine12 + "\n" + raichuImageLine13 + "\n" + raichuImageLine14 + "\n" + raichuImageLine15;
+
+
         //BULBASAUR VARIABLES
 
         int bulbasaurStageCount = 0;
@@ -111,6 +145,11 @@ public class Main {
                 stage2PokemonAbility1 = pikachuAbility1;
                 stage2PokemonAbility2 = pikachuAbility2;
                 stage2PokemonStageCount = pikachuStageCount;
+                stage3PokemonImage = raichuImage;
+                stage3PokemonType = "Raichu";
+                stage3PokemonAbility1 = raichuAbility1;
+                stage3PokemonAbility2 = raichuAbility2;
+                stage3PokemonStageCount = raichuStageCount;
                 System.out.println("Pichu selected!");
                 break;
             }
@@ -168,6 +207,7 @@ public class Main {
 
         Pokemon pokemonStage1 = new Pokemon(pokemonName, stage1PokemonType, pokemonClass, stage1PokemonImage, pokemonFontColour, pokemonBackroundColour, stage1PokemonAbility1, stage1PokemonAbility2, stage1PokemonStageCount);
         Pokemon pokemonStage2 = new Pokemon(pokemonName, stage2PokemonType, pokemonClass, stage2PokemonImage, pokemonFontColour, pokemonBackroundColour, stage2PokemonAbility1, stage2PokemonAbility2, stage2PokemonStageCount);
+        Pokemon pokemonStage3 = new Pokemon(pokemonName, stage3PokemonType, pokemonClass, stage3PokemonImage, pokemonFontColour, pokemonBackroundColour, stage3PokemonAbility1, stage3PokemonAbility2, stage3PokemonStageCount);
 
         //COMMAND LINES LOOP FOR STAGE ONE
 
@@ -200,7 +240,7 @@ public class Main {
                 }
                 else {
                     b = false; //if its smaller, it will skip the next class
-                    System.out.println(stage1pokemonType + " doesn't evolve further...")
+                    System.out.println(stage1PokemonType + " doesn't evolve further...");
                 }
             }
 
@@ -213,10 +253,10 @@ public class Main {
 
         //COMMAND LINES LOOP FOR STAGE TWO
 
+        boolean c = false;
+        Scanner stage2PokemonCommands = new Scanner(System.in);
+        String commandInputStage2;
         if (b == true) {    
-            boolean c;
-            Scanner stage2PokemonCommands = new Scanner(System.in);
-            String commandInputStage2;
             while (true) {
                 System.out.println("What sould I do?");
                 commandInputStage2 = stage2PokemonCommands.nextLine();
@@ -254,6 +294,52 @@ public class Main {
             }
         }
         else {}
+
+        //STAGE 3 COMMAND LINES
+
+        if (c == true) {    
+            boolean d;
+            Scanner stage3PokemonCommands = new Scanner(System.in);
+            String commandInputStage3;
+            while (true) {
+                System.out.println("What sould I do?");
+                commandInputStage3 = stage3PokemonCommands.nextLine();
+                if (commandInputStage3.equals("ability 1")) {
+                    pokemonStage3.ability1();
+                }
+                else if (commandInputStage3.equalsIgnoreCase("ability 2")) {
+                    pokemonStage3.ability2();
+                }
+                else if (commandInputStage3.equalsIgnoreCase("image")) {
+                    pokemonStage3.image();
+                }
+                else if (commandInputStage3.equalsIgnoreCase("stats")) {
+                    pokemonStage3.stats();
+                }
+                else if (commandInputStage3.equalsIgnoreCase("close pokemon")) {
+                    break;
+                }
+                else if (commandInputStage3.equalsIgnoreCase("evolve")) {
+                    if (stage3PokemonStageCount > 0) {
+                        d = true;
+                        //System.out.println(stage3PokemonType + " has evolved to " + stage4PokemonType + "!");
+                        break;
+                    }
+                    else {
+                        d = false;
+                        System.out.println(stage3PokemonType + " doesn't evolve further...");
+                    } 
+                }
+                else {
+                    System.out.println("I didn't understand...");
+                    System.out.println("You can only use these commands:");
+                    System.out.println("     stats\n     ability 1\n     ability 2\n     evolve\n     image\n     close pokemon");
+                }
+            }
+        }
+        else {}
+
+
     }
 }
 
