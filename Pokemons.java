@@ -27,6 +27,14 @@ public class Main {
         String stage2PokemonAbility2 = " ";
         int stage2PokemonStageCount = 0;
 
+        //STAGE 3 POKEMON VARIABLES SETUP
+
+        String stage3PokemonImage = " ";
+        String stage3PokemonType = " ";
+        String stage3PokemonAbility1 = " ";
+        String stage3PokemonAbility2 = " ";
+        int stage3PokemonStageCount = 0;
+
         //PICHU VARIABLES
 
         int pichuStageCount = 1;
@@ -252,6 +260,51 @@ public class Main {
             }
         }
         else {}
+
+        //STAGE 3 POKEMON COMMAND LINES
+
+        if (c == true) {    
+            boolean d;
+            Scanner stage2PokemonCommands = new Scanner(System.in);
+            String commandInputStage2;
+            while (true) {
+                System.out.println("What sould I do?");
+                commandInputStage2 = stage2PokemonCommands.nextLine();
+                if (commandInputStage2.equals("ability 1")) {
+                    pokemonStage2.ability1();
+                }
+                else if (commandInputStage2.equalsIgnoreCase("ability 2")) {
+                    pokemonStage2.ability2();
+                }
+                else if (commandInputStage2.equalsIgnoreCase("image")) {
+                    pokemonStage2.image();
+                }
+                else if (commandInputStage2.equalsIgnoreCase("stats")) {
+                    pokemonStage2.stats();
+                }
+                else if (commandInputStage2.equalsIgnoreCase("close pokemon")) {
+                    break;
+                }
+                else if (commandInputStage2.equalsIgnoreCase("evolve")) {
+                    if (stage2PokemonStageCount > 0) {
+                        d = true;
+                        break;
+                    }
+                    else {
+                        d = false;
+                        break;
+                    } 
+                }
+                else {
+                    System.out.println("I didn't understand...");
+                    System.out.println("You can only use these commands:");
+                    System.out.println("     stats\n     ability 1\n     ability 2\n     evolve\n     image\n     close pokemon");
+                }
+            }
+        }
+        else {}
+
+
     }
 }
 
