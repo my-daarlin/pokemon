@@ -295,19 +295,6 @@ class Pokemon {
     public void ability2() {
         System.out.println(pokemonType + " " + pokemonName + " uses " + pokemonAbility2 + "!");
     }
-
-    // public void evolve() {
-    //     if (pokemonStageCount > 0) {
-
-    //         System.out.print("Your " + pokemonType);
-    //         //pokemonType = evolvePokemonType;
-    //         System.out.println(" has evolved to " + pokemonType + "!");
-
-    //     }
-    //     else {
-    //         System.out.println(pokemonType + " doesn't evolve further...");
-    //     }
-    // }
 }
 
 //V3 - electric class experiment, ONLY INCLUDE IN V3!!
