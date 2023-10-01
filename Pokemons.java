@@ -27,14 +27,6 @@ public class Main {
         String stage2PokemonAbility2 = " ";
         int stage2PokemonStageCount = 0;
 
-        //STAGE 3 POKEMON VARIABLES SETUP
-
-        String stage3PokemonImage = " ";
-        String stage3PokemonType = " ";
-        String stage3PokemonAbility1 = " ";
-        String stage3PokemonAbility2 = " ";
-        int stage3PokemonStageCount = 0;
-
         //PICHU VARIABLES
 
         int pichuStageCount = 1;
@@ -203,11 +195,12 @@ public class Main {
             else if (commandInputStage1.equalsIgnoreCase("evolve")) {
                 if (stage1PokemonStageCount > 0) { //if its bigger, it will pass to the next loop 
                     b = true;
+                    System.out.println(stage1PokemonType + " has evolved to " + stage2PokemonType + "!");
                     break;
                 }
                 else {
                     b = false; //if its smaller, it will skip the next class
-                    break;
+                    System.out.println(stage1pokemonType + " doesn't evolve further...")
                 }
             }
 
@@ -245,11 +238,12 @@ public class Main {
                 else if (commandInputStage2.equalsIgnoreCase("evolve")) {
                     if (stage2PokemonStageCount > 0) {
                         c = true;
+                        System.out.println(stage2PokemonType + " has evolved to " + stage3PokemonType + "!");
                         break;
                     }
                     else {
                         c = false;
-                        break;
+                        System.out.println(stage2PokemonType + " doesn't evolve further...");
                     } 
                 }
                 else {
@@ -260,51 +254,6 @@ public class Main {
             }
         }
         else {}
-
-        //STAGE 3 POKEMON COMMAND LINES
-
-        if (c == true) {    
-            boolean d;
-            Scanner stage2PokemonCommands = new Scanner(System.in);
-            String commandInputStage2;
-            while (true) {
-                System.out.println("What sould I do?");
-                commandInputStage2 = stage2PokemonCommands.nextLine();
-                if (commandInputStage2.equals("ability 1")) {
-                    pokemonStage2.ability1();
-                }
-                else if (commandInputStage2.equalsIgnoreCase("ability 2")) {
-                    pokemonStage2.ability2();
-                }
-                else if (commandInputStage2.equalsIgnoreCase("image")) {
-                    pokemonStage2.image();
-                }
-                else if (commandInputStage2.equalsIgnoreCase("stats")) {
-                    pokemonStage2.stats();
-                }
-                else if (commandInputStage2.equalsIgnoreCase("close pokemon")) {
-                    break;
-                }
-                else if (commandInputStage2.equalsIgnoreCase("evolve")) {
-                    if (stage2PokemonStageCount > 0) {
-                        d = true;
-                        break;
-                    }
-                    else {
-                        d = false;
-                        break;
-                    } 
-                }
-                else {
-                    System.out.println("I didn't understand...");
-                    System.out.println("You can only use these commands:");
-                    System.out.println("     stats\n     ability 1\n     ability 2\n     evolve\n     image\n     close pokemon");
-                }
-            }
-        }
-        else {}
-
-
     }
 }
 
@@ -346,19 +295,6 @@ class Pokemon {
     public void ability2() {
         System.out.println(pokemonType + " " + pokemonName + " uses " + pokemonAbility2 + "!");
     }
-
-    // public void evolve() {
-    //     if (pokemonStageCount > 0) {
-
-    //         System.out.print("Your " + pokemonType);
-    //         //pokemonType = evolvePokemonType;
-    //         System.out.println(" has evolved to " + pokemonType + "!");
-
-    //     }
-    //     else {
-    //         System.out.println(pokemonType + " doesn't evolve further...");
-    //     }
-    // }
 }
 
 //V3 - electric class experiment, ONLY INCLUDE IN V3!!
