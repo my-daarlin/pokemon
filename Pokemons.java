@@ -195,11 +195,12 @@ public class Main {
             else if (commandInputStage1.equalsIgnoreCase("evolve")) {
                 if (stage1PokemonStageCount > 0) { //if its bigger, it will pass to the next loop 
                     b = true;
+                    System.out.println(stage1PokemonType + " has evolved to " + stage2PokemonType + "!");
                     break;
                 }
                 else {
                     b = false; //if its smaller, it will skip the next class
-                    break;
+                    System.out.println(stage1pokemonType + " doesn't evolve further...")
                 }
             }
 
@@ -237,11 +238,12 @@ public class Main {
                 else if (commandInputStage2.equalsIgnoreCase("evolve")) {
                     if (stage2PokemonStageCount > 0) {
                         c = true;
+                        System.out.println(stage2PokemonType + " has evolved to " + stage3PokemonType + "!");
                         break;
                     }
                     else {
                         c = false;
-                        break;
+                        System.out.println(stage2PokemonType + " doesn't evolve further...");
                     } 
                 }
                 else {
