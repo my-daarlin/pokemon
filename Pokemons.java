@@ -1,22 +1,22 @@
-//URL USED
+//SITES USED
 //https://emojicombos.com/pokemon-dot-art
 
 import java.util.Scanner;
 
-//public class PokemonsV6 {
-public class Main {
+public class Pokemons {
+//public class Main {
     public static void main(String[] args) {
         
         //MAIN POKEMON VARIABLES SETUP
 
-        String pokemonName;
-        String pokemonClass;
-        String pokemonBackroundColour;
-        String pokemonFontColour;
+        String pokemonName;;
         
         //STAGE 1 POKEMON VARIABLES SETUP
 
+        String stage1PokemonBackroundColour;
+        String stage1PokemonFontColour;
         String stage1PokemonImage;
+        String stage1PokemonClass;
         String stage1PokemonType;
         String stage1PokemonAbility1;
         String stage1PokemonAbility2;
@@ -24,6 +24,9 @@ public class Main {
 
         //STAGE 2 POKEMON VARIABLES SETUP
 
+        String stage2PokemonBackroundColour = " ";
+        String stage2PokemonFontColour = " ";
+        String stage2PokemonClass = " ";
         String stage2PokemonImage = " ";
         String stage2PokemonType = " ";
         String stage2PokemonAbility1 = " ";
@@ -32,6 +35,9 @@ public class Main {
 
         //STAGE 3 POKEMON VARIABLES SETUP
 
+        String stage3PokemonBackroundColour = " ";
+        String stage3PokemonFontColour = " ";
+        String stage3PokemonClass = " ";
         String stage3PokemonImage = " ";
         String stage3PokemonType = " ";
         String stage3PokemonAbility1 = " ";
@@ -43,6 +49,8 @@ public class Main {
         int pichuStageCount = 2;
         String pichuAbility1 = "\u001b[43m" + "\u001b[30m" + "collect" + "\u001B[0m";   
         String pichuAbility2 = "\u001b[43m" + "\u001b[30m" + "cry for help" + "\u001B[0m";
+        String pichuBackroundColour = "\u001b[43m";  //yellow
+        String pichuFontColour = "\u001b[30m"; //black
         String pichuImageLine1 = "        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⣶⣿";
         String pichuImageLine2 = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣴⣾⣿⣿⣿⣿⣿";
         String pichuImageLine3 = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿⣿⠟⢻⣿⣿⣿⣿";
@@ -113,6 +121,8 @@ public class Main {
         int bulbasaurStageCount = 0;
         String bulbasaurAbility1 = "\u001b[42m" + "\u001b[30m" + "Whine whip" + "\u001B[0m";
         String bulbasaurAbility2 = "\u001b[42m" + "\u001b[30m" + "Razor leaf" + "\u001B[0m";
+        String bulbasaurFontColour = "\u001b[30m";
+        String bulbasaurBackroundColour = "\u001b[42m";
         String bulbasaurImageLine1  = ("         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⣀⡀");
         String bulbasaurImageLine2  = (" ⠀⠀⢀⡀⠀⠀       ⠀⠠⠐⠂⠀⠁⠀⠀⠀⠀");
         String bulbasaurImageLine3  = (" ⠀⠰⡁⠐⢉⣉⣭⡍⠁⠂⠉⠘⡀ ⠀⠀⠀⠀⠂⠡⠀");
@@ -125,7 +135,38 @@ public class Main {
         String bulbasaurImageLine10  = (" ⠀⠀⠀⠛⠒⠒⠁⠀⠈⠷⡤⠤⠐⠀⠘⠒⠒⠖⠁⠀");
         String bulbasaurImage = bulbasaurImageLine1 + "\n" + bulbasaurImageLine2 + "\n" + bulbasaurImageLine3 + "\n" + bulbasaurImageLine4 + "\n" + bulbasaurImageLine5 + "\n" + bulbasaurImageLine6 + "\n" + bulbasaurImageLine7 + "\n" + bulbasaurImageLine8 + "\n" + bulbasaurImageLine9 + "\n" + bulbasaurImageLine10;
 
-        //POKEMON TYPE SELECT + CLASS/ABILITY/IMAGE/STAGE COUNT/STAGE 2 VARIABLES ASSIGN
+        //EEVEE VARIABLES
+
+        int eeveeStageCount = 1;
+        String eeveeAbility1 = "\u001b[30m" + "\u001b[47m" + "Be Prepared" + "\u001B[0m";
+        String eeveeAbility2 = "\u001b[30m" + "\u001b[47m" + "Bite" + "\u001B[0m";
+        String eeveeTextColour = "\u001b[30m";
+        String eeveeBackroundColour = "\u001b[47m";
+        String eeveeImage = "Im sorry, but Eevee doesn't have a picture yet...";
+        
+        //FLAREON VARIABLES
+
+        int flareonStageCount = 0;
+        String flareonAbility1 = "\u001b[41m" + "\u001b[30m" + "Bite" + "\u001B[0m";
+        String flareonAbility2 = "\u001b[41m" + "\u001b[30m" + "Fire Spin" + "\u001B[0m";
+        String flareonFontColour = "\u001b[30m";
+        String flareonBackroundColour = "\u001b[41m";
+        String flareonImageLine1 = "⠐⣶⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣷⠀";
+        String flareonImageLine2 = "⠀⠸⡏⠙⠦⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣠⠖⠋⣸⠃⠀";
+        String flareonImageLine3 = "⠀⠀⢻⠀⠀⠈⢳⡀⠀⠀⠀⢨⢢⠀⢠⠞⠁⠀⢠⡏⠀⠀";
+        String flareonImageLine4 = "⠀⠀⠈⣧⠀⠀⠀⢻⡀⡠⠔⠊⠀⢣⡏⠀⠀⠀⡾⠀⠀⠀";
+        String flareonImageLine5 = "⠀⠀⠀⠈⠓⠦⣴⣼⡏⠀⠀⠀⢠⣾⣤⣤⠶⠛⠁⢀⣿⠀";
+        String flareonImageLine6 = "⠀⠀⠀⠀⠀⣶⠟⢻⣿⣦⣀⣤⣾⣿⡏⠙⢲⠀⠀⣾⣿⡇";
+        String flareonImageLine7 = "⠀⠀⠀⠀⣸⠃⠀⢀⠀⢹⣿⣿⠃⢀⡇⠀⠘⣶⣶⣿⣿⠇";
+        String flareonImageLine8 = "⠀⠀⠀⠀⢰⠀⠀⠈⠻⣿⣯⣿⡿⠟⠁⠀⠀⣿⣿⣿⡿⠀";
+        String flareonImageLine9 = "⠀⠀⠀⠀⠙⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣽⣿⣿⣄⠀";
+        String flareonImageLine10 = "⠀⠀⠀⠀⠀⢺⡀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⡟⠁⠀";
+        String flareonImageLine11 = "⠀⠀⠀⠀⠀⠀⠈⣿⣦⣴⣴⣤⣶⣤⣾⣿⣿⣿⣿⡁⠀⠀";
+        String flareonImageLine12 = "⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿⣿⣿⣿⣿⡿⣿⠟⠋⠉⠀⠀⠀";
+        String flareonImageLine13 = "⠀⠀⠀⠀⠀⠀⠺⠿⢿⣿⠏⠻⣿⡿⠿⠇⠀⠀⠀⠀⠀⠀";
+        String flareonImage = flareonImageLine1 + "\n" + flareonImageLine2 + "\n" + flareonImageLine3 + "\n" + flareonImageLine4 + "\n" + flareonImageLine5 + "\n" + flareonImageLine6 + "\n" + flareonImageLine7 + "\n" + flareonImageLine8 + "\n" + flareonImageLine9 + "\n" + flareonImageLine10 + "\n" + flareonImageLine11 + "\n" + flareonImageLine12 + "\n" + flareonImageLine13;
+
+        //POKEMON TYPE SELECT + CLASS/ABILITY/IMAGE/STAGE COUNT/COLOUR/STAGE 2 VARIABLES ASSIGN
         
         Scanner pokemonTypeInputScanner = new Scanner(System.in);                                       // Create a Scanner object
         System.out.println("What Pokemon do you select? :");
@@ -134,54 +175,125 @@ public class Main {
         while (true) {
             pokemonTypeInput = pokemonTypeInputScanner.nextLine();                                           // Read user input
             if (pokemonTypeInput.equalsIgnoreCase("Pichu")) {
+                //type/class/ST/image
                 stage1PokemonType = "Pichu";
-                pokemonClass = "Electric";
-                stage1PokemonAbility1 = pichuAbility1;
-                stage1PokemonAbility2 = pichuAbility2;
+                stage1PokemonClass = "Electric";
                 stage1PokemonStageCount = pichuStageCount;
                 stage1PokemonImage = pichuImage;
-                stage2PokemonImage = pikachuImage;
+
+                //abilities
+                stage1PokemonAbility1 = pichuAbility1;
+                stage1PokemonAbility2 = pichuAbility2;
+
+                //colours
+                stage1PokemonFontColour = pichuFontColour;
+                stage1PokemonBackroundColour = pichuBackroundColour;
+                
+                //STAGE 2
+                //type/class/ST/image
                 stage2PokemonType = "Pikachu";
+                stage2PokemonClass = stage1PokemonClass;
+                stage2PokemonStageCount = pikachuStageCount;
+                stage2PokemonImage = pikachuImage;
+                
+                //abilities
                 stage2PokemonAbility1 = pikachuAbility1;
                 stage2PokemonAbility2 = pikachuAbility2;
-                stage2PokemonStageCount = pikachuStageCount;
-                stage3PokemonImage = raichuImage;
+
+                //colours
+                stage2PokemonFontColour = pichuFontColour;
+                stage2PokemonBackroundColour = pichuBackroundColour;
+                
+                //STAGE 3
+                //type/class/ST/image
                 stage3PokemonType = "Raichu";
+                stage3PokemonClass = stage1PokemonClass;
+                stage3PokemonStageCount = raichuStageCount;
+                stage3PokemonImage = raichuImage;
+
+                //abilities
                 stage3PokemonAbility1 = raichuAbility1;
                 stage3PokemonAbility2 = raichuAbility2;
-                stage3PokemonStageCount = raichuStageCount;
+
+                //colours
+                stage3PokemonFontColour = pichuFontColour;
+                stage3PokemonBackroundColour = pichuBackroundColour;
+
                 System.out.println("Pichu selected!");
                 break;
             }
             else if (pokemonTypeInput.equalsIgnoreCase("Bulbasaur")) {
+                //type/class/ST/image
                 stage1PokemonType = "Bulbasaur";
-                pokemonClass = "Seed";
-                stage1PokemonAbility1 = bulbasaurAbility1;
-                stage1PokemonAbility2 = bulbasaurAbility2;
+                stage1PokemonClass = "Seed";
                 stage1PokemonStageCount = bulbasaurStageCount;
                 stage1PokemonImage = bulbasaurImage;
+
+                //abilities
+                stage1PokemonAbility1 = bulbasaurAbility1;
+                stage1PokemonAbility2 = bulbasaurAbility2;
+
+                //colours
+                stage1PokemonFontColour = bulbasaurFontColour;
+                stage1PokemonBackroundColour = bulbasaurBackroundColour;
+                
+                
                 System.out.println("Bulbasaur selected!");
                 break;
             }
+            else if (pokemonTypeInput.equalsIgnoreCase("eevee")) {
+                //type/class/ST/image
+                stage1PokemonType = "Eevee";
+                stage1PokemonClass = "Normal";
+                stage1PokemonStageCount = eeveeStageCount;
+                stage1PokemonImage = eeveeImage;
+
+                //abilities
+                stage1PokemonAbility1 = eeveeAbility1;
+                stage1PokemonAbility2 = eeveeAbility2;
+
+                //colours
+                stage1PokemonFontColour = eeveeTextColour;
+                stage1PokemonBackroundColour = eeveeBackroundColour;
+                
+                //STAGE2
+                //type/class/ST/image
+                stage2PokemonType = "Flareon";
+                stage2PokemonClass = "Fire";
+                stage2PokemonStageCount = flareonStageCount;
+                stage2PokemonImage = flareonImage;
+
+                //abilities
+                stage2PokemonAbility1 = flareonAbility1;
+                stage2PokemonAbility2 = flareonAbility2;
+
+                //colours
+                stage2PokemonFontColour = flareonFontColour;
+                stage2PokemonBackroundColour = flareonBackroundColour;
+
+                System.out.println("Eevee selected!");
+                break;
+            }
             else {
-                System.out.println("You can only select out of these Pokemons: \n    Bulbasaur\n    Pichu");
+                System.out.println("You can only select out of these Pokemons: \n    Bulbasaur\n    Pichu\n    Eevee");
             }
         }
 
-        //COLOUR ASSIGN
+        // //COLOUR ASSIGN
         
-        if (pokemonClass.equalsIgnoreCase("Electric")) {
-            pokemonBackroundColour = "\u001b[43m";  //yellow
-            pokemonFontColour = "\u001b[30m"; //black
-        }
-        else if (pokemonClass.equalsIgnoreCase("seed")) {
-            pokemonBackroundColour = "\u001b[42m"; //green
-            pokemonFontColour = "\u001b[30m"; //black
-        }
-        else {
-            pokemonBackroundColour = " COLOUR NOT ITITIALIZED ";
-            pokemonFontColour = " COLOUR NOT ITITIALIZED ";
-        }
+        // if (stage1PokemonClass.equalsIgnoreCase("Electric")) {
+        //     pokemonBackroundColour = "\u001b[43m";  //yellow
+        //     stage1PokemonFontColour = "\u001b[30m"; //black
+        // }
+        // else if (stage1PokemonClass.equalsIgnoreCase("seed")) {
+        //     pokemonBackroundColour = "\u001b[42m"; //green
+        //     stage1PokemonFontColour = "\u001b[30m"; //black
+        // else if (stage1PokemonClass)
+        // }
+        // else {
+        //     pokemonBackroundColour = " COLOUR NOT ITITIALIZED ";
+        //     stage1PokemonFontColour = " COLOUR NOT ITITIALIZED ";
+        // }
 
 
         //IMAGE ASSIGN
@@ -205,9 +317,9 @@ public class Main {
         
         //NEW POKEMON CLASS CREATION
 
-        Pokemon pokemonStage1 = new Pokemon(pokemonName, stage1PokemonType, pokemonClass, stage1PokemonImage, pokemonFontColour, pokemonBackroundColour, stage1PokemonAbility1, stage1PokemonAbility2, stage1PokemonStageCount);
-        Pokemon pokemonStage2 = new Pokemon(pokemonName, stage2PokemonType, pokemonClass, stage2PokemonImage, pokemonFontColour, pokemonBackroundColour, stage2PokemonAbility1, stage2PokemonAbility2, stage2PokemonStageCount);
-        Pokemon pokemonStage3 = new Pokemon(pokemonName, stage3PokemonType, pokemonClass, stage3PokemonImage, pokemonFontColour, pokemonBackroundColour, stage3PokemonAbility1, stage3PokemonAbility2, stage3PokemonStageCount);
+        Pokemon pokemonStage1 = new Pokemon(pokemonName, stage1PokemonType, stage1PokemonClass, stage1PokemonImage, stage1PokemonFontColour, stage1PokemonBackroundColour, stage1PokemonAbility1, stage1PokemonAbility2, stage1PokemonStageCount);
+        Pokemon pokemonStage2 = new Pokemon(pokemonName, stage2PokemonType, stage2PokemonClass, stage2PokemonImage, stage2PokemonFontColour, stage2PokemonBackroundColour, stage2PokemonAbility1, stage2PokemonAbility2, stage2PokemonStageCount);
+        Pokemon pokemonStage3 = new Pokemon(pokemonName, stage3PokemonType, stage3PokemonClass, stage3PokemonImage, stage3PokemonFontColour, stage2PokemonBackroundColour, stage3PokemonAbility1, stage3PokemonAbility2, stage3PokemonStageCount);
 
         //COMMAND LINES LOOP FOR STAGE ONE
 
@@ -367,7 +479,8 @@ class Pokemon {
     }
     public void stats() {
         String colourReset = "\u001B[0m";
-        System.out.println("Hi, I am a " + pokemonType + " my name is " + pokemonName + " and I am a " + pokemonFontColour + pokemonBackroundColour + pokemonClass + colourReset + " type Pokemon!");
+        System.out.println("Hi, I am a " + pokemonType + ", my name is " + pokemonName + " and I am a " + pokemonFontColour + pokemonBackroundColour + pokemonClass + colourReset + " type Pokemon!");
+        System.out.println("My abilities are:\n\t--" + pokemonAbility1 + "\n\t--" + pokemonAbility2);
     }
 
     public void image() {
