@@ -279,35 +279,6 @@ public class Pokemons {
             }
         }
 
-        // //COLOUR ASSIGN
-        
-        // if (stage1PokemonClass.equalsIgnoreCase("Electric")) {
-        //     pokemonBackroundColour = "\u001b[43m";  //yellow
-        //     stage1PokemonFontColour = "\u001b[30m"; //black
-        // }
-        // else if (stage1PokemonClass.equalsIgnoreCase("seed")) {
-        //     pokemonBackroundColour = "\u001b[42m"; //green
-        //     stage1PokemonFontColour = "\u001b[30m"; //black
-        // else if (stage1PokemonClass)
-        // }
-        // else {
-        //     pokemonBackroundColour = " COLOUR NOT ITITIALIZED ";
-        //     stage1PokemonFontColour = " COLOUR NOT ITITIALIZED ";
-        // }
-
-
-        //IMAGE ASSIGN
-
-        // if (pokemonType.equalsIgnoreCase("Pikachu")) {
-        //     pokemonImage = pikachuImage;
-        // }
-        // else if (pokemonType.equalsIgnoreCase("Bulbasaur")) {
-        //     pokemonImage = bulbasaurImage;
-        // }
-        // else {
-        //     pokemonImage = "Undefined";
-        // }
-        
         //POKEMON NAME
 
         Scanner pokemonNameInput = new Scanner(System.in);  // Create a Scanner object
@@ -500,15 +471,4 @@ class Pokemon {
         System.out.println(pokemonType + " " + pokemonName + " uses " + pokemonAbility2 + "!");
     }
 }
-
-//SUBCLASS ELECTRIC? NOT WORKING...
- 
-// class ElectricType extends Pokemon {
-//     public Pikachu(String IdPikachu, String image) {
-//         characterIdPikachu = IdPikachu;
-//     }
-//     public void imagePrint() {
-//         System.out.println("test");
-//     } 
-// }
     
