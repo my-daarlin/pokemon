@@ -317,9 +317,9 @@ public class Pokemons {
         
         //NEW POKEMON CLASS CREATION
 
-        Pokemon pokemonStage1 = new Pokemon(pokemonName, stage1PokemonType, stage1PokemonClass, stage1PokemonImage, stage1PokemonFontColour, stage1PokemonBackroundColour, stage1PokemonAbility1, stage1PokemonAbility2, stage1PokemonStageCount);
-        Pokemon pokemonStage2 = new Pokemon(pokemonName, stage2PokemonType, stage2PokemonClass, stage2PokemonImage, stage2PokemonFontColour, stage2PokemonBackroundColour, stage2PokemonAbility1, stage2PokemonAbility2, stage2PokemonStageCount);
-        Pokemon pokemonStage3 = new Pokemon(pokemonName, stage3PokemonType, stage3PokemonClass, stage3PokemonImage, stage3PokemonFontColour, stage2PokemonBackroundColour, stage3PokemonAbility1, stage3PokemonAbility2, stage3PokemonStageCount);
+        Pokemon pokemonStage1 = new Pokemon(pokemonName, stage1PokemonType, stage1PokemonClass, stage1PokemonImage, stage1PokemonFontColour, stage1PokemonBackroundColour, stage1PokemonAbility1, stage1PokemonAbility2);
+        Pokemon pokemonStage2 = new Pokemon(pokemonName, stage2PokemonType, stage2PokemonClass, stage2PokemonImage, stage2PokemonFontColour, stage2PokemonBackroundColour, stage2PokemonAbility1, stage2PokemonAbility2);
+        Pokemon pokemonStage3 = new Pokemon(pokemonName, stage3PokemonType, stage3PokemonClass, stage3PokemonImage, stage3PokemonFontColour, stage3PokemonBackroundColour, stage3PokemonAbility1, stage3PokemonAbility2);
 
         //COMMAND LINES LOOP FOR STAGE ONE
 
@@ -407,12 +407,12 @@ public class Pokemons {
         }
         else {}
 
-        //STAGE 3 COMMAND LINES
+        //COMMAND LOOP FOR STAGE 3
 
+        //boolean d;
+        Scanner stage3PokemonCommands = new Scanner(System.in);
+        String commandInputStage3;
         if (c == true) {    
-            boolean d;
-            Scanner stage3PokemonCommands = new Scanner(System.in);
-            String commandInputStage3;
             while (true) {
                 System.out.println("What sould I do?");
                 commandInputStage3 = stage3PokemonCommands.nextLine();
@@ -433,12 +433,12 @@ public class Pokemons {
                 }
                 else if (commandInputStage3.equalsIgnoreCase("evolve")) {
                     if (stage3PokemonStageCount > 0) {
-                        d = true;
+                        //d = true;
                         //System.out.println(stage3PokemonType + " has evolved to " + stage4PokemonType + "!");
                         break;
                     }
                     else {
-                        d = false;
+                        //d = false;
                         System.out.println(stage3PokemonType + " doesn't evolve further...");
                     } 
                 }
@@ -450,10 +450,17 @@ public class Pokemons {
             }
         }
         else {}
+        
+        //SCANNER CLOSE
 
-
+        stage1PokemonCommands.close();
+        stage2PokemonCommands.close();
+        stage3PokemonCommands.close();
+        pokemonNameInput.close();
+        pokemonTypeInputScanner.close();
     }
 }
+
 
 class Pokemon {
     private String pokemonName;
@@ -464,9 +471,8 @@ class Pokemon {
     private String pokemonBackroundColour;
     private String pokemonAbility1;
     private String pokemonAbility2;
-    private int pokemonStageCount;
 
-    public Pokemon(String pokemonName, String pokemonType, String pokemonClass, String pokemonImage, String pokemonFontColour, String pokemonBackroundColour, String pokemonAbility1, String pokemonAbility2, int pokemonStageCount) {
+    public Pokemon(String pokemonName, String pokemonType, String pokemonClass, String pokemonImage, String pokemonFontColour, String pokemonBackroundColour, String pokemonAbility1, String pokemonAbility2) {
         this.pokemonName = pokemonName;
         this.pokemonImage = pokemonImage;
         this.pokemonType = pokemonType;
@@ -475,7 +481,6 @@ class Pokemon {
         this.pokemonBackroundColour = pokemonBackroundColour;
         this.pokemonAbility1 = pokemonAbility1;
         this.pokemonAbility2 = pokemonAbility2;
-        this.pokemonStageCount = pokemonStageCount;
     }
     public void stats() {
         String colourReset = "\u001B[0m";
@@ -496,7 +501,7 @@ class Pokemon {
     }
 }
 
-//V3 - electric class experiment, ONLY INCLUDE IN V3!!
+//SUBCLASS ELECTRIC? NOT WORKING...
  
 // class ElectricType extends Pokemon {
 //     public Pikachu(String IdPikachu, String image) {
